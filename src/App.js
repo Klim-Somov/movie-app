@@ -1,9 +1,17 @@
 import "./App.css";
-// 4ff0bf73
+import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Movie from "./pages/Movie";
+
 function App() {
   return (
     <div className="App">
-      <h2>klim app</h2>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie/:id" element={<Movie />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
